@@ -21,6 +21,32 @@ li a {
 }
 
 
+/*Carousel*/
+.carousel-control.right, 
+.carousel-control.left {
+    background-image: none;
+    color: grey;
+}
+
+.carousel-indicators {
+  bottom:-50px;
+}
+
+.carousel-indicators li {
+    border-color: grey;
+}
+  
+.carousel-indicators li.active {
+    background-color: grey;
+}
+
+.carousel-caption {
+  text-shadow: none;
+  color: black;
+  bottom: -30px;
+}
+
+
 /*Product*/
 .col-md-4{
   padding:25px;
