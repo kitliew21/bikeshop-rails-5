@@ -1,14 +1,35 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Bikeshop</title>
-    <%= csrf_meta_tags %>
+<head>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+  <title>Bike Dublin</title>
 
-  <body>
-    <%= yield %>
-  </body>
-</html>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <%= csrf_meta_tags %>
+</head>
+
+<body>
+  <header>
+  	<div class="col-sm-4"><%= link_to "Bikeshop", static_pages_index_path, :class => "h2 brand-logo" %></div>
+      <nav class="col-sm-8 navbar default-navbar">
+        <ul>
+          <li><%= link_to "Home", static_pages_index_path %></li>
+          <li><%= link_to "About", static_pages_about_path %></li>
+          <li><%= link_to "Contact", static_pages_contact_path %></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <%= yield %>
+
+  <footer>
+    &copy; 2015 Bike Dublin
+  </footer>
+</body>
