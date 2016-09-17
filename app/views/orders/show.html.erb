@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @order.product.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @order.product.description %>
+</p>
+
+<p>
+  <strong>Image url:</strong>
+  <%= @order.product.image_url %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @order.product.price %>
+</p>
+
+
+<%= link_to 'Destroy', order, method: :delete, data: { confirm: 'Are you sure?' } %> |
+<%= link_to 'Back', orders_path %> 

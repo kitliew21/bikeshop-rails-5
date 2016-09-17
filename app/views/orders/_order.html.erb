@@ -1,0 +1,8 @@
+<div class="col-sm-1 col-md-8">
+  <%= image_tag(order.product.image_url, class: "img-responsive") %>
+  <h2><%= order.product.name %></h2>
+  <p><%= order.product.description %></p>
+  <strong>Price: € <%= order.product.price %></strong> 
+  <%= link_to 'Show details', order %>
+  <%= link_to 'Destroy', order, method: :delete, data: { confirm: 'Are you sure?' } %>
+</div>

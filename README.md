@@ -1,24 +1,5 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This ecommerce bike store was created for Module 3 & 4 of my web development course for CareerFoundry. The aim of this project was to familiarize myself with the Ruby and Rails Framework. I spent majority of my time understanding their MVC architecture. It also gave me the opportunity to use Debian Linux.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+The module consist of many tasks such as using the scaffolding function, creating new controllers, models and migrating database. It puts heavy emphasis on learning how to use the Github version control and Heroku app together with Rails.
