@@ -1,20 +1,12 @@
 <p id="notice"><%= notice %></p>
- 
+
 <h2>Products</h2>
- 
+
 <div class="container-fluid">
   <div class="row">
-    <% @products.each do |product| %>
-    <div class="col-sm-2 col-md-4">
-      <%= image_tag(product.image_url, class: "img-responsive") %>
-      <h2><%= product.name %></h2>
-      <p><%= product.description %></p>
-      <strong>Price: € <%= product.price %></strong> 
-      </div>
-    <% end %>
+    <%= render @products %>
   </div>
 </div>
- 
-<br>
- 
+
+
 <%= link_to 'New Product', new_product_path %>
