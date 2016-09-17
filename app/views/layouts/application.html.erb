@@ -16,10 +16,12 @@
 
 <body>
   <header>
-  	<div class="col-sm-4"><%= link_to "Bikeshop", static_pages_index_path, :class => "h2 brand-logo" %></div>
+    <div class="col-sm-4"><%= link_to "Bike Dublin", static_pages_landing_page_path, :class => "h2 brand-logo" %></div>
       <nav class="col-sm-8 navbar default-navbar">
         <ul>
           <li><%= link_to "Home", static_pages_index_path %></li>
+          <li><%= link_to "Product", products_path %></li>
+          <li><%= link_to "Order", orders_path %></li>
           <li><%= link_to "About", static_pages_about_path %></li>
           <li><%= link_to "Contact", static_pages_contact_path %></li>
         </ul>

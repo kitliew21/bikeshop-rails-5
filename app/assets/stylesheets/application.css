@@ -21,15 +21,28 @@ li a {
 }
 
 
+/*Product*/
+.col-md-4{
+  padding:25px;
+}
+
+
+/*About Us*/
+.about-us {
+  text-align: center;
+  padding: 0 20px 0px 20px;
+}
+
+
 /*Image*/
 img {
-    margin: 0 auto;
+  margin: 0 auto;
 }
 
 
 /*Footer*/
 footer {
-background-color: grey;
+  background-color: grey;
   height: 30px;
   padding: 10px;
   width: 100%;
