@@ -59,6 +59,12 @@ li a {
   padding: 0 20px 0px 20px;
 }
 
+/*Contact form*/
+form {
+  display: inline-block;
+  text-align: center;
+}
+
 
 /*Image*/
 img {
