@@ -1,12 +1,23 @@
 <h2>Contact Us</h2>
 
-<br>
-<div class="col-md-4">
-  <li><span class="glyphicon glyphicon-glyphicon glyphicon-envelope"></span> email: bikestore23@gmail.com</li> 
-</div>   		
-<div class="col-md-4">
-  <li><span class="glyphicon glyphicon-glyphicon glyphicon-home"></span> address: 123 bike street, Dublin 02, Ireland</li>
+<%= flash[:notice] %>
+<p> Send us your enquiries using the form below. Thank you!</p>
+<%= form_tag("/static_pages/thank_you") do %>
+<div class="row">
+  <div class="col-md-4">
+    <div class="form-group">
+      <%= label_tag :name %>
+      <%= text_field_tag :name, nil, class: "form-control", placeholder: "Enter Name" %>
+    </div>      
+    <div class="form-group">
+      <%= label_tag :email, "Email Address" %>
+      <%= text_field_tag :email, nil, class: "form-control", placeholder: "Enter Email" %>
+    </div>
+    <div class="form-group">
+      <%= label_tag :message %>
+      <%= text_area_tag :message, nil, class: "form-control", placeholder: "Enter Message" %>
+    </div>      
+  </div>
 </div>
-<div class="col-md-4">
-  <li><span class="glyphicon glyphicon-glyphicon glyphicon-phone-alt"></span> phone number: +353 1 1234567</li>
-</div>
+<%= submit_tag "Send" %>   
+<% end %>
