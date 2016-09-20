@@ -24,7 +24,18 @@
       <%= submit_tag("Search") %>
       <% end %>
     </div>
+
+    <%= flash[:notice] %>
     <nav class="col-sm-6 navbar default-navbar">
+    <ul>
+      <li>
+        <% if user_signed_in? %>
+          <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+        <% else %>
+          <%= link_to('Login', new_user_session_path) %>
+        <% end %>
+      </li>
+      </ul>
       <ul>
         <li><%= link_to "Home", static_pages_index_path %></li>
         <li><%= link_to "Product", products_path %></li>
