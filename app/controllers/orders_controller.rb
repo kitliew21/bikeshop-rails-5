@@ -1,6 +1,6 @@
 class OrdersController < ApplicationController
- 
-before_action :set_order, only: [:show, :destroy]
+
+before_filter :authenticate_user!
 
   def index
     @orders = Order.all
@@ -35,7 +35,6 @@ before_action :set_order, only: [:show, :destroy]
     end
   end
 
-  before_filter :authenticate_user!
 
   private
     # Use callbacks to share common setup or constraints between actions.

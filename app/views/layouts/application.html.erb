@@ -23,6 +23,10 @@
       <%= text_field_tag(:q) %>
       <%= submit_tag("Search") %>
       <% end %>
+
+      <% if notice %>
+        <p id="notice" class="alert alert-info"><%= notice %></p>
+      <% end %>
     </div>
 
     <%= flash[:notice] %>
