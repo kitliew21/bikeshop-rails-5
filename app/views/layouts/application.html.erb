@@ -31,14 +31,14 @@
         </div>
         <div class="navbar-collapse collapse">
 
-          <%= form_tag("/products", method: "get", class: "navbar-form navbar-left", role: "Search") do %>
+          <%= form_tag("/products", method: "get", class: "navbar-form navbar-right", role: "Search") do %>
           <div class="form-group">
             <%= text_field_tag :q, nil, class: "form-control", placeholder: "Search" %>
           </div>
           <%= submit_tag("Search", class: "btn btn-default") %>
           <% end %>
           <%cache do%>
-          <ul class="nav navbar-nav navbar-right">
+          <ul class="nav navbar-nav navbar-left">
             <li><%= link_to "Home", static_pages_index_path %></li>
             <li><%= link_to "Product", products_path %></li>
             <li><%= link_to "Order", orders_path %></li>
