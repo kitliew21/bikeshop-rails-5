@@ -16,38 +16,61 @@
 
 <body>
   <header>
-    <div class="col-sm-2"><%= link_to "Bike Dublin", static_pages_landing_page_path, :class => "h2 brand-logo" %></div>
-    <div class="col-sm-4">
-      <%= form_tag("/products", method: "get") do %>
-      <%= label_tag(:q, "Search for:") %>
-      <%= text_field_tag(:q) %>
-      <%= submit_tag("Search") %>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="<%= root_path %>">
+            <p>Bike Dublin</p>
+          </a>
+        </div>
+        <div class="navbar-collapse collapse">
+
+          <%= form_tag("/products", method: "get", class: "navbar-form navbar-left", role: "Search") do %>
+          <div class="form-group">
+            <%= text_field_tag :q, nil, class: "form-control", placeholder: "Search" %>
+          </div>
+          <%= submit_tag("Search", class: "btn btn-default") %>
+          <% end %>
+          <%cache do%>
+          <ul class="nav navbar-nav navbar-right">
+            <li><%= link_to "Home", static_pages_index_path %></li>
+            <li><%= link_to "Product", products_path %></li>
+            <li><%= link_to "Order", orders_path %></li>
+            <li><%= link_to "About", static_pages_about_path %></li>
+            <li><%= link_to "Contact", static_pages_contact_path %></li>
+            <%end%>
+            <li>
+              <% if signed_in? %>
+              <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+              <% else %>
+              <%= link_to('Login', new_user_session_path) %>
+              <% end %>
+            </li>
+          </ul>
+
+        </div>
+        <!-- navbar collapse -->
+      </div>
+    </nav>
+    <div class="wrapper">
+      <% if alert %>
+        <div class="alert alert-danger" role="alert">
+          <%= alert %>
+        </div>
       <% end %>
 
       <% if notice %>
-        <p id="notice" class="alert alert-info"><%= notice %></p>
+        <div class="alert alert-success" role="alert">
+          <%= notice %>
+        </div>
       <% end %>
     </div>
-
-    <%= flash[:notice] %>
-    <nav class="col-sm-6 navbar default-navbar">
-    <ul>
-      <li>
-        <% if user_signed_in? %>
-          <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
-        <% else %>
-          <%= link_to('Login', new_user_session_path) %>
-        <% end %>
-      </li>
-      </ul>
-      <ul>
-        <li><%= link_to "Home", static_pages_index_path %></li>
-        <li><%= link_to "Product", products_path %></li>
-        <li><%= link_to "Order", orders_path %></li>
-        <li><%= link_to "About", static_pages_about_path %></li>
-        <li><%= link_to "Contact", static_pages_contact_path %></li>
-      </ul>
-    </nav>
   </header>
 
   <%= yield %>

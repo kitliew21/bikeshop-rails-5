@@ -3,21 +3,8 @@ body {
   text-align: center;
 }
 
-
-/*Header*/
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  float: right;
-}
- 
-li {
-  display: inline;
-}
- 
-li a {
-  padding: 20px;
+.wrapper {
+  margin: 70px 2% auto;
 }
 
 
