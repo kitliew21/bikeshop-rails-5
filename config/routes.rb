@@ -3,8 +3,6 @@ Rails.application.routes.draw do
   resources :users
   resources :products 
 
-  resources :orders, only: [:index, :show, :create, :destroy]
-
   post 'static_pages/thank_you'
 
   get '/products/:id', to: 'products#show'
@@ -19,5 +17,12 @@ Rails.application.routes.draw do
 
 	root 'static_pages#landing_page'
 
+  resources :orders, only: [:index, :show, :create, :destroy]
+
+  resources :products do
+    resources :comments
+  end
+
+  resources :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
