@@ -28,8 +28,8 @@
 
 <p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
 
-<%= render 'new_comment' %>
-<%= render 'comments' %>
+<%= render 'products/new_comment' %>
+<%= render 'products/comments' %>
 
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>
