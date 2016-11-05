@@ -8,6 +8,13 @@ body {
 }
 
 
+/*Navbar*/
+#nav_login_btn {
+  margin-top: 8px;
+  margin-right: 27px;
+}
+
+
 /*Carousel*/
 .carousel-control.right, 
 .carousel-control.left {
