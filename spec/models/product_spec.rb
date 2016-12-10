@@ -3,15 +3,15 @@ require 'rails_helper'
 describe Product do
 
 	before do	  
-	  @product = FactoryGirl.build(:product)
-  	  @user = FactoryGirl.build(:user)
-	  @product.comments.push(FactoryGirl.build(:comment))
+	  @product = FactoryGirl.create(:product)
+  	  @user = FactoryGirl.create(:user)
+	  @prouct.comments.push(FactoryGirl.build(:comment))
  	  @product.comments.push(FactoryGirl.build(:comment))
  	  @product.comments.push(FactoryGirl.build(:comment))
 	end
 
 	it "returns the average rating of all comments" do
-		expect(@product.average_rating).to eq 3
+		expect(@product.average_rating).to eq 1
 	end
 
 	it "is not valid" do

@@ -5,7 +5,6 @@ FactoryGirl.define do
     description "blabla bla"
     image_url "test.de/test"
     price 100
-    colour "white"
   end
 
 end 
