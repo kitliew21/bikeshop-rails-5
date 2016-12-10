@@ -33,6 +33,7 @@ group :development, :test do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'sqlite3'
   gem 'rspec-rails', '~> 3.5'
+  gem 'rails-controller-testing'
 end
  
 group :production do
@@ -40,7 +41,7 @@ group :production do
 end
  
 group :development do
-	gem 'web-console'
+  gem 'web-console'
   gem 'listen', '~> 3.0.5'
     # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
@@ -54,4 +55,3 @@ gem 'devise'
 #add pagination to comments
 gem 'cancancan', '~> 1.10'
 gem 'will_paginate', '~> 3.1.0'
-gem 'rails-controller-testing'
