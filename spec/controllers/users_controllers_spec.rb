@@ -4,7 +4,6 @@ describe UsersController, :type => :controller do
 
   before do
     @user = FactoryGirl.create(:user)
-    @other_user = FactoryGirl.create(:user)
   end
   
   describe 'GET #show' do
@@ -23,7 +22,7 @@ describe UsersController, :type => :controller do
     context 'No user is logged in' do
       it 'redirects to login' do
         get :show, id: @user.id
-        expect(response).to redirect_to(root_path)
+        expect(response).to redirect_to(new_user_session_path)
       end
     end
   end

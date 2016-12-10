@@ -1,12 +1,16 @@
 Rails.application.routes.draw do
-  devise_for :users
-  resources :users
 
+  resources :users
   resources :products do
     resources :comments
   end
 
+  resources :orders, only: [:index, :show, :create, :destroy]
+
+
   post 'static_pages/thank_you'
+
+  post 'payments/create'
 
   get '/products/:id', to: 'products#show'
 
@@ -20,7 +24,7 @@ Rails.application.routes.draw do
 
 	root 'static_pages#index'
 
-  resources :orders, only: [:index, :show, :create, :destroy]
+  devise_for :users, :path => '', :path_names => {:sign_in => 'login', :sign_out => 'logout'}, :controllers => { :registrations => "user_registrations" }
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

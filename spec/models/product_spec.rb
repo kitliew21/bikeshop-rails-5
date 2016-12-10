@@ -5,13 +5,13 @@ describe Product do
 	before do	  
 	  @product = FactoryGirl.create(:product)
   	  @user = FactoryGirl.create(:user)
-	  @prouct.comments.push(FactoryGirl.build(:comment))
+	  @product.comments.push(FactoryGirl.build(:comment))
  	  @product.comments.push(FactoryGirl.build(:comment))
  	  @product.comments.push(FactoryGirl.build(:comment))
 	end
 
 	it "returns the average rating of all comments" do
-		expect(@product.average_rating).to eq 1
+		expect(@product.average_rating).to eq 3
 	end
 
 	it "is not valid" do
