@@ -36,6 +36,7 @@ group :development, :test do
   gem 'rails-controller-testing'
   gem 'factory_girl_rails', '~> 4.0'
   gem 'stripe'
+  gem 'byebug'
 end
  
 group :production do
@@ -57,3 +58,4 @@ gem 'devise'
 #add pagination to comments
 gem 'cancancan', '~> 1.10'
 gem 'will_paginate', '~> 3.1.0'
+gem "brakeman", :require => false

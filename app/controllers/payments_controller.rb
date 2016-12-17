@@ -12,7 +12,6 @@ class PaymentsController < ApplicationController
           :source => token,
           :description => params[:stripeEmail]
       )
-        
       rescue Stripe::CardError => e
        # The card has been declined
         body = e.json_body
