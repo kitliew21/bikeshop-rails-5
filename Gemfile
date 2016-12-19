@@ -39,8 +39,7 @@ group :development, :test do
 end
  
 group :production do
-  gem 'pg'
-  gem 'dalli' 
+  gem 'pg' 
 end
  
 group :development do
@@ -60,3 +59,6 @@ gem 'cancancan', '~> 1.10'
 gem 'will_paginate', '~> 3.1.0'
 gem 'brakeman', :require => false
 gem 'stripe'
+gem 'dalli'
+gem 'redis-rails'
+gem 'newrelic_rpm'
