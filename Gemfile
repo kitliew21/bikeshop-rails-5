@@ -39,7 +39,8 @@ group :development, :test do
 end
  
 group :production do
-  gem 'pg' 
+  gem 'pg'
+  gem 'dalli' 
 end
  
 group :development do
