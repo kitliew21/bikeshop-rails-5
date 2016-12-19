@@ -6,4 +6,9 @@ $(document).on('turbolinks:load', function(){
         return $(this).attr('data-score');
       }
     });
+
+     /* elevate zoom plugin*/
+	$(".img-zoom").elevateZoom({
+	});
 });
+
